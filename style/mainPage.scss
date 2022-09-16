@@ -1,0 +1,174 @@
+@import "null";
+@import "UI";
+@import "colorVariables";
+@import "headerFooter";
+
+body{
+  font-family: Ubuntu, serif;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  display: grid;
+  grid-template: minmax(84px, auto) 1fr minmax(328px, auto)/ 1fr;
+  min-height: 100%;
+}
+
+.small-text{
+  font-size: $smallText;
+  color: black;
+}
+.smallest-text{
+  font-size: 12px;
+  color: $darkblue;
+}
+
+.text{
+  font-size: $text;
+  color: $darkblue;
+  line-height: 26px;
+}
+.black-text{
+  font-size: $text;
+  color: black;
+}
+.lightColor-text{
+  font-size: $text;
+  color: $grey;
+}
+.bold-text{
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}
+.secondColor-text{
+  font-size: $text;
+  color: $textSecondColor;
+}
+.lightSecondColor-text{
+  font-size: $text;
+  color: $lightSecondColor;
+}
+.secondColor-text-lined{
+  font-size: $text;
+  text-decoration: underline;
+  color: $textSecondColor;
+}
+
+.title{
+  color: black;
+  font-weight: 700;
+  font-size: $title;
+  text-transform: uppercase;
+}
+
+.gradient-title{
+  background-color: red;
+  background-image: linear-gradient(270deg, rgba(142,233,1,1) 0%, rgba(79,156,32,1) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.main{
+  &__background{
+    position: relative;
+    z-index: -2;
+    width: 100%;
+  }
+  &__banner{
+    position: relative;
+  }
+  &__title{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+  }
+  &__motto{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  &__motto div{
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+  }
+  &__circle{
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  }
+  &__benefits{
+    display: flex;
+    padding: 50px 135px;
+    justify-content: space-between;
+    background-color: $lightgrey;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    max-width: 170px;
+    gap: 20px
+  }
+  &__info{
+    text-align: center;
+    max-width: 1200px;
+    margin: 50px auto;
+
+  }
+}
+
+.info{
+  & > .title{
+    text-align: center;
+    margin: 50px 0 25px 0;
+  }
+  &__content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  &__card{
+    max-width: 350px;
+  }
+  &__text{
+    border: 1px solid $lightgrey;
+    padding: 20px 25px;
+    & > div{
+      margin-top: 8px;
+    }
+  }
+}
+
+@media(max-width: 1115px){
+  .info{
+    &__content{
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 720px){
+  .small-text{
+    font-size: $smallText;
+    color: black;
+  }
+  .text{
+    font-size: 20px;
+  }
+  //Create burger menu in header__menu
+}

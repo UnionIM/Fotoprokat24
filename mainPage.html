@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/mainPage.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <a href="mainPage.html" class="header__logo"><img src="./content/svg/logo.svg" alt=""></a>
+        <nav class="header__menu">
+            <ul class="header__list">
+                <li class="header__item"><a href="product.html" class="small-text">КАТАЛОГ</a></li>
+                <li class="header__item"><a data-goto=".main__section_1" href="" class="small-text header__link">О КОМПАНИИ</a></li>
+                <li class="header__item"><a data-goto=".main__section_2" href="" class="small-text header__link">НОВОСТИ</a></li>
+                <li class="header__item"><a data-goto=".main__section_3" href="" class="small-text header__link">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+        <label>
+            <input type="text" class="custom-input header__input" placeholder="Поиск">
+        </label>
+        <div class="header__searchbar">
+            <button class="dropdown__button"></button>
+            <div class="dropdown__content">
+                <label>
+                    <input type="text" class="custom-input" placeholder="Поиск">
+                </label>
+            </div>
+        </div>
+        <a href="" class="small-text">ВОЙТИ</a>
+        <ul class="header__icons">
+            <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+            <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+            <li class="header__icon"><a href=""><img src="./content/svg/shopping-cart.svg" alt=""></a></li>
+        </ul>
+    </header>
+    <main class="main">
+        <div class="main__banner">
+            <img class="main__background" src="./content/img/header.png" alt="">
+            <div class="main__title">
+                <div class="main__motto">
+                    <div class="title"><span class="gradient-title">Аренда</span> фото</div>
+                    <div class="title">И видео</div>
+                    <div class="title">Оборудования</div>
+                </div>
+                <div class="main__circle"></div>
+            </div>
+        </div>
+        <div class="main__benefits">
+            <div class="main__item">
+                <img src="./content/svg/list.svg" alt="">
+                <span class="black-text">Самый большой
+выбор техники</span>
+            </div>
+            <div class="main__item">
+                <img src="./content/svg/time.svg" alt="">
+                <span class="black-text">Быстрое
+оформление заказа</span>
+            </div>
+            <div class="main__item">
+                <img src="./content/svg/placeholder.svg" alt="">
+                <span class="black-text">Можно забрать заказ
+в пункте выдачи</span>
+            </div>
+            <div class="main__item">
+                <img src="./content/svg/product.svg" alt="">
+                <span class="black-text">Доставка в любую
+точку</span>
+            </div>
+            <div class="main__item">
+                <img src="./content/svg/card.svg" alt="">
+                <span class="black-text">Оплата картой
+и наличными</span>
+            </div>
+        </div>
+        <div class="info main__section_1">
+            <div class="title">
+                О компании
+            </div>
+            <div class="info__content black-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aut autem corporis doloremque et illo illum iure molestiae nam natus nemo nisi odit optio placeat quod recusandae, saepe sed velit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet assumenda dolor dolorem dolorum ea, fuga, laborum libero nisi possimus qui quia ratione repellat repudiandae tenetur vel velit voluptate voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolor porro vitae? Cum delectus eaque fugit id ipsum, nisi. Aut dicta distinctio ex fugiat placeat praesentium, voluptates. Ipsam odio, unde?
+            </div>
+        </div>
+        <div class="info main__section_2">
+            <div class="title">
+                Новости
+            </div>
+            <div class="info__content">
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto1.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            7 апреля 2019
+                        </div>
+                        <div class="bold-text">
+                            Выбираем SD-карты для съемки
+                        </div>
+                        <div class="text">
+                            За исключением отсутствующей системы аэродинамического охлаждения, корпус этого ноутбука почти такой же.
+                        </div>
+                    </div>
+                </div>
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto2.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            20 мая 2019
+                        </div>
+                        <div class="bold-text">
+                            Что представила Photokina
+                        </div>
+                        <div class="text">
+                            Ноутбук Zephyrus S (GX502) весит 2 кг, а корпус толщиной всего 18,9 мм позволяет легко уместить его в обычный рюкзак.
+                        </div>
+                    </div>
+                </div>
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto3.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            14 июня 2019
+                        </div>
+                        <div class="bold-text">
+                            Новинка goPro Hero 5
+                        </div>
+                        <div class="text">
+                            Специальные «легкие» версии приложений для Android GO и отсутствие некоторых предустановленных программ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info main__section_3">
+            <div class="title">
+                Контакты
+            </div>
+            <div class="info__content">
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto1.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            7 апреля 2019
+                        </div>
+                        <div class="bold-text">
+                            Выбираем SD-карты для съемки
+                        </div>
+                        <div class="text">
+                            За исключением отсутствующей системы аэродинамического охлаждения, корпус этого ноутбука почти такой же.
+                        </div>
+                    </div>
+                </div>
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto2.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            20 мая 2019
+                        </div>
+                        <div class="bold-text">
+                            Что представила Photokina
+                        </div>
+                        <div class="text">
+                            Ноутбук Zephyrus S (GX502) весит 2 кг, а корпус толщиной всего 18,9 мм позволяет легко уместить его в обычный рюкзак.
+                        </div>
+                    </div>
+                </div>
+                <div class="info__card">
+                    <img src="./content/img/newsPhoto3.png" alt="">
+                    <div class="info__text">
+                        <div class="text">
+                            14 июня 2019
+                        </div>
+                        <div class="bold-text">
+                            Новинка goPro Hero 5
+                        </div>
+                        <div class="text">
+                            Специальные «легкие» версии приложений для Android GO и отсутствие некоторых предустановленных программ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__interactive-bar">
+            <div class="interactive-bar__content">
+                <div class="interactive-bar__description">
+                    <div class="interactive-bar__icon">
+                        <img src="./content/svg/convert.svg" alt="">
+                    </div>
+                    <div>
+                        <div class="lightSecondColor-text">
+                            Подпишитесь
+                        </div>
+                        <div class="lightColor-text">
+                            на новости и акции
+                        </div>
+                    </div>
+                </div>
+                <label>
+                    <input type="text" placeholder="Введите e-mail" class="interactive-bar__sub-input second-custom-input"><!--
+                        --><button class="second-custom-button">ПОДПИСАТЬСЯ</button>
+                </label>
+                <a href="" class="interactive-bar__call-button">
+                    <img src="./content/svg/Phone.svg" alt="">
+                    <div class="lightSecondColor-text">
+                        Заказать звонок
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__description">
+                <div class="footer__logo">
+                    <img src="./content/svg/logo.svg" alt="">
+                </div>
+                <div class="footer__motto">
+                    Самый удобный сервис  аренды фото, видео и кинотехники
+                </div>
+                <div class="footer__copywrite smallest-text">
+                    © 2015 – 2019 Fotoprokat 24
+                </div>
+            </div>
+            <div class="footer__social-media">
+                <div class="footer__media-row">
+                    <img src="./content/svg/facebook.svg" alt="">
+                    <img src="./content/svg/twitter.svg" alt="">
+                    <img src="./content/svg/vk.svg" alt="">
+                    <img src="./content/svg/youtube.svg" alt="">
+                    <img src="./content/svg/instagram.svg" alt="">
+                </div>
+                <a href="" class="smallest-text">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <div class="footer__contact-info">
+                <div class="bold-text">
+                    +480-538-2858
+                </div>
+                <div>
+                    Проспект мира, дом 12
+                </div>
+            </div>
+            <div class="footer__pay-info">
+                <img src="./content/svg/visa.svg" alt="">
+                <img src="./content/svg/mastercard.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="script/headerFooter.js"></script>
+<script src="script/mainPage.js"></script>
+</body>
+</html>
