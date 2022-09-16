@@ -1,0 +1,240 @@
+@import "null";
+@import "UI";
+@import "colorVariables";
+
+.header{
+  display: flex;
+  font-weight: 700;
+  padding: 29px 135px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $grey;
+  max-height: 84px;
+  z-index: 10;
+  &__menu{
+
+  }
+  &__burger-icons{
+    display: none;
+  }
+  &__list{
+    display: flex;
+    gap: 24px;
+  }
+  &__searchbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    a{
+      margin-left: 24px;
+    }
+  }
+  &__icons{
+    display: flex;
+    gap: 24px
+  }
+  .header__searchbar-login:hover > button .search-window{
+    border: solid 1px red;
+  }
+}
+
+.dropdown__content{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: solid 1px $grey;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 70px;
+  width: 320px;
+  z-index: 1;
+
+  opacity: 0;
+  transform: translate(0, 30%);
+  visibility: hidden;
+  pointer-events: none;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+  input{
+    margin: 11px;
+  }
+}
+
+._activeDD{
+  transition-delay:0s;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+body._pc .header__searchbar:hover .dropdown__content{
+  transition-delay:0s;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translate(0, 0);
+}
+
+.footer{
+  background-color: $lightgrey;
+  margin-top: 100px;
+  &__interactive-bar{
+    background-color: $darkblue;
+    height: 79px;
+    padding-top: 16px;
+  }
+  .interactive-bar{
+    &__content{
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 25px;
+      align-items: center;
+      margin: 0 auto;
+      label{
+        height: 48.5px;
+      }
+    }
+    &__description{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__sub-input{
+      height: 100%;
+    }
+    &__call-button{
+      display: flex;
+    }
+  }
+  &__info{
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    padding: 0 25px;
+    align-items: center;
+    margin: 31px auto;
+    height: 98px;
+  }
+  &__description{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__motto{
+    max-width: 255px;
+  }
+  &__social-media{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__contact-info{
+    height: 100%;
+    div{
+      margin-bottom: 4px;
+    }
+  }
+  &__pay-info{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    img{
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: 1400px){
+  .header{
+    padding: 29px 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header{
+    padding: 15px 50px;
+    &__input{
+      display: none;
+    }
+  }
+  body._pc .header__searchbar:hover{
+    transform: translate(0, 0);
+    padding: 21px 0;
+  }
+  .dropdown__button{
+    width: 40px;
+    height: 40px;
+    background-image: url("/content/svg/search (1).svg");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    border-radius: 50%;
+  }
+}
+
+@media(max-width: 1000px){
+  .header{
+    & > label{
+      display: none;
+    }
+    &__icons{
+      display: none;
+    }
+    &__list{
+      flex-direction: column;
+    }
+    &__burger{
+
+    }
+    &__burger-icons{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__menu{
+      position: fixed;
+      z-index: 10;
+      top: 84px;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      text-align: right;
+      transform: translate(100%,0);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      transition: left 0.3s ease 0s;
+      overflow: auto;
+    }
+    .menu_active{
+      transform: translate(0,0);
+    }
+  }
+  .burger{
+    display: inline-block;
+    cursor: pointer;
+    &__bar{
+      width: 35px;
+      height: 3px;
+      margin: 5px 0;
+      transition: 0.3s;
+      background-color: black;
+    }
+    .burger_active &__bar-1{
+      transform: translate(0, 8px) rotate(-45deg);
+    }
+    .burger_active &__bar-2{
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .burger_active &__bar-3{
+      transform: translate(0, -8px) rotate(45deg);
+    }
+  }
+}
+
+@media(max-width: 850px){
+
+}
