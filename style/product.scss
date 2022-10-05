@@ -2,76 +2,12 @@
 @import "UI";
 @import "colorVariables";
 @import "headerFooter";
-
-body{
-  font-family: Ubuntu, serif;
-}
+@import "textStyles";
 
 .wrapper{
   display: grid;
   grid-template: minmax(84px, auto) 1fr minmax(328px, auto)/ 1fr;
   min-height: 100%;
-}
-
-.small-text{
-  font-size: $smallText;
-  color: black;
-}
-.smallest-text{
-  font-size: 12px;
-  color: $darkblue;
-}
-
-.text{
-  font-size: $text;
-  color: $darkblue;
-  line-height: 26px;
-}
-.black-text{
-  font-size: $text;
-  color: black;
-}
-.lightColor-text{
-  font-size: $text;
-  color: $grey;
-}
-.bold-text{
-  font-size: 18px;
-  color: black;
-  font-weight: 700;
-}
-.secondColor-text{
-  font-size: $text;
-  color: $textSecondColor;
-}
-.lightSecondColor-text{
-  font-size: $text;
-  color: $lightSecondColor;
-}
-.secondColor-text-lined{
-  font-size: $text;
-  text-decoration: underline;
-  color: $textSecondColor;
-}
-
-.title{
-  color: black;
-  font-weight: 700;
-  font-size: $title;
-  text-transform: uppercase;
-}
-
-.gradient-title{
-  background-color: red;
-  background-image: linear-gradient(270deg, rgba(142,233,1,1) 0%, rgba(79,156,32,1) 100%);
-  background-size: 100%;
-  background-repeat: repeat;
-  display: inline-block;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  font-weight: 700;
-  font-size: 30px;
 }
 
 .main{
@@ -172,6 +108,80 @@ body{
   }
 }
 
+.swiper{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $grey;
+  width: 397px;
+  & > div{
+    display: flex;
+    justify-content: center;
+  }
+  &__PiP-buttons{
+
+  }
+  &__PiP_button{
+    padding: 10px 12px 12px 10px;
+    border: solid $lightgrey;
+    border-width: 0 1px 1px 0;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ._activePiPButton{
+    padding: 10px;
+    border: 3px solid $secondColor;
+  }
+  &__tipaSmallImg{
+    text-align: center;
+    padding: 9px 12px;
+    background-color: $grey;
+  }
+  &__wrapper{
+    position: relative;
+    padding: 25px;
+    width: 295px;
+    height: 270px;
+    overflow: hidden;
+  }
+  &__white_bar{
+    width: 245px;
+    height: 25px;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+  }
+  &__content{
+
+  }
+  &__slide{
+
+  }
+  &__tipaBigImg{
+    width: 245px;
+    height: 245px;
+    text-align: center;
+    padding: 110px 0;
+    background-color: $grey;
+    border: 2px solid red;
+  }
+  &__icons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 22px 22px 22px 0;
+  }
+  &__social_media{
+    margin-top: 21px;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 21px;
+  }
+}
+
 @media (max-width: 1300px){
   body{
     overflow-x: hidden;
@@ -192,20 +202,11 @@ body{
   .text{
     font-size: 20px;
   }
-  .main__swiper{
-    text-align: center;
-    img{
-      width: 500px;
-      height: 500px;
-    }
+  .swiper{
+    margin: 0 auto 45px;
   }
 }
 
 @media (max-width: 565px){
-  .main__swiper{
-    img{
-      width: 300px;
-      height: 300px;
-    }
-  }
+
 }

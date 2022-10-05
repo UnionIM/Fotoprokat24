@@ -13,7 +13,7 @@
             <a href="mainPage.html" class="header__logo"><img src="./content/svg/logo.svg" alt=""></a>
             <nav class="header__menu">
                 <ul class="header__list">
-                    <li class="header__item"><a href="" class="small-text">КАТАЛОГ</a></li>
+                    <li class="header__item"><a href="katalog.html" class="small-text">КАТАЛОГ</a></li>
                     <li class="header__item"><a data-goto=".main__section_1" href="mainPage.html" class="small-text header__link">О КОМПАНИИ</a></li>
                     <li class="header__item"><a data-goto=".main__section_2" href="mainPage.html" class="small-text header__link">НОВОСТИ</a></li>
                     <li class="header__item"><a data-goto=".main__section_3" href="mainPage.html" class="small-text header__link">КОНТАКТЫ</a></li>
@@ -27,7 +27,7 @@
             <label>
                 <input type="text" class="custom-input header__input" placeholder="Поиск">
             </label>
-            <div class="header__searchbar">
+            <div class="header__searchbar dropdown">
                 <button class="dropdown__button"></button>
                 <div class="dropdown__content">
                     <label>
@@ -57,8 +57,52 @@
             </div>
             <div class="main__content">
                 <div class="main__card">
-                    <div class="main__swiper">
-                        <img src="./content/img/product.png" alt="">
+                    <div class="main__swiper swiper">
+                        <div>
+                            <div class="swiper__PiP-buttons">
+                                <div id="swiperPIP1" class="swiper__PiP_button _activePiPButton">
+                                    <img src="./content/img/small1.png" alt="">
+                                </div>
+                                <div id="swiperPIP2" class="swiper__PiP_button">
+                                    <img src="./content/img/small2.png" alt="">
+                                </div>
+                                <div id="swiperPIP3" class="swiper__PiP_button">
+                                    <img src="./content/img/small3.png" alt="">
+                                </div>
+                                <div id="swiperPIP4" class="swiper__PiP_button">
+                                    <img src="./content/img/small4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper__wrapper">
+                                <div class="swiper__white_bar"></div>
+                                <div class="swiper__content">
+                                    <div id="slide1" class="swiper__slide">
+                                        <img class="swiper__slide_content" src="./content/img/big1.png" alt="">
+                                    </div>
+                                    <div id="slide2" class="swiper__slide">
+                                        <img class="swiper__slide_content" src="./content/img/big2.png" alt="">
+                                    </div>
+                                    <div id="slide3" class="swiper__slide">
+                                        <img class="swiper__slide_content" src="./content/img/big3.png" alt="">
+                                    </div>
+                                    <div id="slide4" class="swiper__slide">
+                                        <img class="swiper__slide_content" src="./content/img/big4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper__icons">
+                                <a href=""><img src="./content/svg/compare.svg" alt=""></a>
+                                <a href=""><img src="./content/svg/Star.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="swiper__social_media">
+                            <a href=""><img src="./content/svg/vk.svg" height="28" width="28" alt=""></a>
+                            <a href=""><img src="./content/svg/twitter.svg" height="28" width="28" alt=""></a>
+                            <a href=""><img src="./content/svg/facebook.svg" height="28" width="28" alt=""></a>
+                            <a href=""><img src="./content/svg/whatsapp.svg" alt=""></a>
+                            <a href=""><img src="./content/svg/viber.svg" alt=""></a>
+                        </div>
+
                     </div>
                     <div class="main__block-title">Информация</div>
                     <div class="main__characteristics">
@@ -171,7 +215,7 @@
                                 </li>
                                 <li class="main__item">
                                     <div class="main__characteristic-title text">
-                                        Выходной
+                                        Месяц
                                     </div>
                                     <div class="main__value secondColor-text">
                                         29 400
@@ -345,6 +389,7 @@
         </footer>
     </div>
     <script src="script/headerFooter.js"></script>
-    <script src="script/index.js"></script>
+    <script src="script/product.js"></script>
+    <script src="script/UI.js"></script>
 </body>
 </html>
