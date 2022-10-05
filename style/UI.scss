@@ -18,6 +18,14 @@
 }
 //------------------------------//
 
+.dash{
+  display: inline-block;
+  border: solid $darkblue;
+  border-width: 1px 0 0 0;
+  transform: translate(0, 18px);
+  width: 8px;
+}
+
 .custom-input{
   background-color: $lightgrey;
   min-height: 26px;
@@ -38,6 +46,18 @@
   color: $darkblue;
 }
 
+.grey-input{
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 14px;
+  color: $darkblue;
+
+  border: 1px solid $grey;
+  background-color: $lightgrey;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
 .custom-button{
   background: linear-gradient($lightSecondColor, $secondColor);
   padding: 17px 35px;
@@ -55,4 +75,127 @@
   text-transform: uppercase;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   font-weight: 700;
+}
+
+.white-custom-button{
+  padding: 13px 62px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+
+  background: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+select{
+  padding: 10px 15px;
+  border: 1px solid $grey;
+}
+
+.custom-checkbox{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  &__mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.5) 0%, #F5F5F5 100%);
+    border: 1px solid $lightgrey;
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover input ~ &__mark {
+
+  }
+  &:hover input:checked ~ &__mark:after {
+
+  }
+  & input:checked ~ &__mark:after {
+    display: block;
+  }
+  & input:checked ~ &__mark{
+    background: $secondColor;
+  }
+
+  & &__mark:after {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    width: 7px;
+    height: 10px;
+    transform: rotate(45deg) translate(2px, -2px);
+  }
+
+  & input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+.custom-radio{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 16px;
+  height: 16px;
+  & input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.5) 0%, #F5F5F5 100%);
+    border: 1px solid #E3E3E3;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+  }
+
+  &:hover input ~ &__mark{
+    background-color: #ccc;
+  }
+
+  & input:checked ~ &__mark{
+    background: $secondColor;
+    border: none;
+  }
+
+  &__mark:after{
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  & input:checked ~ &__mark:after{
+    display: block;
+  }
+
+  & &__mark:after{
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+  }
 }
