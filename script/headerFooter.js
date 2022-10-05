@@ -47,6 +47,9 @@ function app () {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.header__menu');
 
+  const infoLink = document.querySelectorAll('.header__link[data-goto]')
+
+
   const searchMenuHandler = (e) => {
     const searchMenu = e.target
     searchMenu.classList.add('_activeDD');
@@ -63,7 +66,14 @@ function app () {
     burger.classList.toggle('burger_active')
   })
 
-
+  if(infoLink.length > 0){
+    infoLink.forEach((el, ind) => {
+      window.sessionStorage.setItem('0', '-1');
+      el.addEventListener('click', () => {
+        window.sessionStorage.setItem('0', ind.toString());
+      })
+    })
+  }
 }
 
 app()
