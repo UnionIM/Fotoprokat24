@@ -13,16 +13,21 @@
         <a href="mainPage.html" class="header__logo"><img src="./content/svg/logo.svg" alt=""></a>
         <nav class="header__menu">
             <ul class="header__list">
-                <li class="header__item"><a href="product.html" class="small-text">КАТАЛОГ</a></li>
+                <li class="header__item"><a href="katalog.html" class="small-text">КАТАЛОГ</a></li>
                 <li class="header__item"><a data-goto=".main__section_1" href="" class="small-text header__link">О КОМПАНИИ</a></li>
                 <li class="header__item"><a data-goto=".main__section_2" href="" class="small-text header__link">НОВОСТИ</a></li>
                 <li class="header__item"><a data-goto=".main__section_3" href="" class="small-text header__link">КОНТАКТЫ</a></li>
+            </ul>
+            <ul class="header__burger-icons">
+                <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                <li class="header__icon"><a href=""><img src="./content/svg/shopping-cart.svg" alt=""></a></li>
             </ul>
         </nav>
         <label>
             <input type="text" class="custom-input header__input" placeholder="Поиск">
         </label>
-        <div class="header__searchbar">
+        <div class="header__searchbar dropdown">
             <button class="dropdown__button"></button>
             <div class="dropdown__content">
                 <label>
@@ -36,6 +41,11 @@
             <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
             <li class="header__icon"><a href=""><img src="./content/svg/shopping-cart.svg" alt=""></a></li>
         </ul>
+        <div class="header__burger burger">
+            <div class="burger__bar-1 burger__bar"></div>
+            <div class="burger__bar-2 burger__bar"></div>
+            <div class="burger__bar-3 burger__bar"></div>
+        </div>
     </header>
     <main class="main">
         <div class="main__banner">
