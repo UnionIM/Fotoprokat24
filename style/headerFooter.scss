@@ -1,6 +1,7 @@
 @import "null";
 @import "UI";
 @import "colorVariables";
+@import "textStyles";
 
 .header{
   display: flex;
@@ -236,5 +237,39 @@ body._pc .header__searchbar:hover .dropdown__content{
 }
 
 @media(max-width: 850px){
+    .footer{
+      height: 500px;
+      &__info{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        gap: 30px;
+      }
+      &__social-media{
+        margin-left: auto;
+      }
+      &__pay-info{
+        justify-content: right;
+      }
+      &__interactive-bar{
+        height: 140px;
+        & label{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+}
 
+@media(max-width: 650px){
+  .footer{
+    .interactive-bar{
+      &__content{
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+    &__interactive-bar{
+      height: 230px;
+    }
+  }
 }
