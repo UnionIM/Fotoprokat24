@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/catalog.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <a href="mainPage.html" class="header__logo"><img src="./content/svg/logo.svg" alt=""></a>
+        <nav class="header__menu">
+            <ul class="header__list">
+                <li class="header__item"><a href="" class="small-text">КАТАЛОГ</a></li>
+                <li class="header__item"><a data-goto=".main__section_1" href="mainPage.html" class="small-text header__link">О КОМПАНИИ</a></li>
+                <li class="header__item"><a data-goto=".main__section_2" href="mainPage.html" class="small-text header__link">НОВОСТИ</a></li>
+                <li class="header__item"><a data-goto=".main__section_3" href="mainPage.html" class="small-text header__link">КОНТАКТЫ</a></li>
+            </ul>
+            <ul class="header__burger-icons">
+                <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                <li class="header__icon"><a href=""><img src="./content/svg/shopping-cart.svg" alt=""></a></li>
+            </ul>
+        </nav>
+        <label>
+            <input type="text" class="custom-input header__input" placeholder="Поиск">
+        </label>
+        <div class="header__searchbar dropdown">
+            <button class="dropdown__button"></button>
+            <div class="dropdown__content">
+                <label>
+                    <input type="text" class="custom-input" placeholder="Поиск">
+                </label>
+            </div>
+        </div>
+        <a href="" class="small-text">ВОЙТИ</a>
+        <ul class="header__icons">
+            <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+            <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+            <li class="header__icon"><a href=""><img src="./content/svg/shopping-cart.svg" alt=""></a></li>
+        </ul>
+        <div class="header__burger burger">
+            <div class="burger__bar-1 burger__bar"></div>
+            <div class="burger__bar-2 burger__bar"></div>
+            <div class="burger__bar-3 burger__bar"></div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__info">
+            <div class="main__path text">
+                Главная/Каталог/Фотокамеры
+            </div>
+            <div class="main__title title">
+                Фотокамеры
+            </div>
+            <div class="main__description text">
+                Отложение, основываясь большей частью на сейсмических данных, не входит своими составляющими, что очевидно, в силы нормальных реакций связей, так же как и абразивный блеск. Следует отметить, что инфлюация значительно характеризует астатический батолит.
+            </div>
+        </div>
+        <div class="main__brand-slider slider">
+            <div class="bold-text slider__title">Можно выбрать несколько брендов</div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./content/svg/canon.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/fujifilm.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/leica.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/nikon.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/olympus.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/panasonic.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/pentax.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./content/svg/sony.svg" height="50px" width="150px" alt="">
+                        <div class="swiper__check_mark"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__grid-wrapper">
+            <div class="main__cont">
+                <div class="main__amount-container">
+                    <span class="bold-text">Найдено</span>
+                    <span class="gradient-text">21 товаров</span>
+                </div>
+
+                <div class="main__sort sort">
+                    <div class="main__sort_container">
+                        <div>
+                            <button id="popularitySwitch" class="sort__button bold-text-small _activeButton">
+                                По популярности
+                            </button>
+                            <button id="priceSwitch" class="sort__button">
+                                По цене
+                            </button>
+                        </div>
+                        <div class="main__select">
+                            <button class="main__dropdown_button">
+                                Сортировка цены
+                                <span class="main__dropdown_arrow_down arrow"></span>
+                                <span class="main__dropdown_arrow_up arrow arrow_disable"></span>
+                            </button>
+                            <div class="main__dropdown_content">
+                                <div class="main__dropdown_item">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="sort-radio">
+                                        <span class="custom-radio__mark"></span>
+                                    </label>
+                                    <div class="main__dropdown_text black-text">По цене за неделю</div>
+                                </div>
+                                <div class="main__dropdown_item">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="sort-radio">
+                                        <span class="custom-radio__mark"></span>
+                                    </label>
+                                    <div class="main__dropdown_text black-text">По цене за месяц</div>
+                                </div>
+                                <div class="main__dropdown_item">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="sort-radio">
+                                        <span class="custom-radio__mark"></span>
+                                    </label>
+                                    <div class="main__dropdown_text black-text">По цене за выходной</div>
+                                </div>
+                                <div class="main__dropdown_item">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="sort-radio">
+                                        <span class="custom-radio__mark"></span>
+                                    </label>
+                                    <div class="main__dropdown_text black-text">По цене за будний</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort__container">
+                        <div class="sort__arrows">
+                            <div class="sort__arrow _activeBoxArrow">
+                                <span class="sort__down arroww _activeArrow"></span>
+                            </div>
+                            <div class="sort__arrow">
+                                <span class="sort__up arroww"></span>
+                            </div>
+                        </div>
+                        <button class="sort__show_filters_button">All filters</button>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <div class="main__catalog">
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+                <div class="main__card card">
+                    <div class="card__pictures">
+                        <img src="./content/img/1.png" alt="" class="card__photo">
+                        <ul class="card__buttons">
+                            <li class="card__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
+                            <li class="card__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="card__text">
+                        <div class="bold-text-small">PowerShot SX620 HS</div>
+                        <div class="text">Canon</div>
+                        <div class="secondColor-text">От <span class="secondColor-text-bold">1 850</span></div>
+                    </div>
+                    <a href="product.html"><button class="card__button white-custom-button">Подробнее</button></a>
+                </div>
+            </div>
+            <div class="main__filter filter">
+                <div class="filter__column">
+                    <div class="filter__title bold-text-small">Объектив в комплекте</div>
+                    <div class="filter__list">
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="lens">
+                                    <span class="custom-radio__mark"></span>
+                                </label>
+                            </div>
+                            <div>Да</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="lens">
+                                    <span class="custom-radio__mark"></span>
+                                </label>
+                            </div>
+                            <div>Нет</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="lens">
+                                    <span class="custom-radio__mark"></span>
+                                </label>
+                            </div>
+                            <div>Не важно</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__column">
+                    <div class="filter__title bold-text-small">Формат матрицы</div>
+                    <div class="filter__list">
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>4/3 (Four Thirds)</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>APS-C</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>APS-H</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>Full frame</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__column">
+                    <div class="filter__title bold-text-small">Максимальное разрешение записи видеоролика</div>
+                    <div class="filter__list filter__row" style="max-width: 240px">
+                        <label>
+                            <input type="text" placeholder="От 1" class="grey-input filter__input">
+                        </label>
+                        <span class="dash"></span>
+                        <label>
+                            <input type="text" placeholder="До 60" class="grey-input filter__input">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter__column">
+                    <div class="filter__title bold-text-small">Максимальное разрешение записи видеоролика</div>
+                    <div class="filter__list">
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>640x480</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>1920x1080</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>1280x720</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>320x240</div>
+                        </div>
+                        <div class="filter__item">
+                            <div>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox__mark"></span>
+                                </label>
+                            </div>
+                            <div>3840x2160</div>
+                        </div>
+
+                        <span class="filter__show secondColor-text-lined" id="#showAllText">Показать ещё 5</span>
+                        <div id="#hidenText" style="display: none">
+                            <div class="filter__item">
+                                <div>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__mark"></span>
+                                    </label>
+                                </div>
+                                <div>576x720</div>
+                            </div>
+                            <div class="filter__item">
+                                <div>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__mark"></span>
+                                    </label>
+                                </div>
+                                <div>576x960</div>
+                            </div>
+                            <div class="filter__item">
+                                <div>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__mark"></span>
+                                    </label>
+                                </div>
+                                <div>1520x2592</div>
+                            </div>
+                            <div class="filter__item">
+                                <div>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__mark"></span>
+                                    </label>
+                                </div>
+                                <div>1920x2592</div>
+                            </div>
+                            <div class="filter__item">
+                                <div>
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox__mark"></span>
+                                    </label>
+                                </div>
+                                <div>3072x2048</div>
+                            </div>
+                        </div> <span class="filter__show secondColor-text-lined" id="#showLessText" style="display: none">Скрыть последние 5</span>
+                    </div>
+                </div>
+                <button class="filter__button white-custom-button">Все фильтры</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__interactive-bar">
+            <div class="interactive-bar__content">
+                <div class="interactive-bar__description">
+                    <div class="interactive-bar__icon">
+                        <img src="./content/svg/convert.svg" alt="">
+                    </div>
+                    <div>
+                        <div class="lightSecondColor-text">
+                            Подпишитесь
+                        </div>
+                        <div class="lightColor-text">
+                            на новости и акции
+                        </div>
+                    </div>
+                </div>
+                <label>
+                    <input type="text" placeholder="Введите e-mail" class="interactive-bar__sub-input second-custom-input"><!--
+                        --><button class="second-custom-button">ПОДПИСАТЬСЯ</button>
+                </label>
+                <a href="" class="interactive-bar__call-button">
+                    <img src="./content/svg/Phone.svg" alt="">
+                    <div class="lightSecondColor-text">
+                        Заказать звонок
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__description">
+                <div class="footer__logo">
+                    <img src="./content/svg/logo.svg" alt="">
+                </div>
+                <div class="footer__motto">
+                    Самый удобный сервис  аренды фото, видео и кинотехники
+                </div>
+                <div class="footer__copywrite smallest-text">
+                    © 2015 – 2019 Fotoprokat 24
+                </div>
+            </div>
+            <div class="footer__social-media">
+                <div class="footer__media-row">
+                    <img src="./content/svg/facebook.svg" alt="">
+                    <img src="./content/svg/twitter.svg" alt="">
+                    <img src="./content/svg/vk.svg" alt="">
+                    <img src="./content/svg/youtube.svg" alt="">
+                    <img src="./content/svg/instagram.svg" alt="">
+                </div>
+                <a href="" class="smallest-text">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <div class="footer__contact-info">
+                <div class="bold-text">
+                    +480-538-2858
+                </div>
+                <div>
+                    Проспект мира, дом 12
+                </div>
+            </div>
+            <div class="footer__pay-info">
+                <img src="./content/svg/visa.svg" alt="">
+                <img src="./content/svg/mastercard.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+  });
+</script>
+<script src="script/headerFooter.js"></script>
+<script src="script/catalog.js"></script>
+<script src="script/UI.js"></script>
+</body>
+</html>

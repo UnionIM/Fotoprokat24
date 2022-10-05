@@ -1,0 +1,344 @@
+@import "null";
+@import "UI";
+@import "colorVariables";
+@import "headerFooter";
+@import "textStyles";
+
+.main{
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 25px;
+  &__grid-wrapper{
+    margin-top: 50px;
+    display: grid;
+    grid-template: 110px 1fr/ 1fr 1fr;
+  }
+  &__amount-container{
+    margin-bottom: 20px;
+  }
+  &__title{
+    margin: 15px 0;
+  }
+  &__info{
+    max-width: 600px;
+  }
+  &__brand-slider > div{
+    margin: 15px 0;
+    text-align: right;
+  }
+  &__catalog{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-column-start: 1;
+    gap: 30px;
+    max-height: 642px;
+  }
+  &__sort_container{
+    display: flex;
+  }
+
+  &__dropdown_button{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid $grey;
+    margin-left: 50px;
+  }
+  &__dropdown_arrow_down{
+    display: inline-block;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    margin-left: 10px;
+  }
+  &__dropdown_arrow_up{
+    display: inline-block;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-135deg) translate(-4px, -3px);
+    margin-left: 10px;
+  }
+  .arrow_disable{
+    display: none;
+  }
+  &__dropdown_content{
+    position: absolute;
+
+    height: 130px;
+    width: 200px;
+    padding: 10px 15px;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid $grey;
+
+    opacity: 0;
+    transform: translate(50px, 10px);
+    visibility: hidden;
+    pointer-events: none;
+    transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+  }
+  ._activeSortDD{
+    transition-delay:0s;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  &__dropdown_item{
+    display: flex;
+    align-items: center;
+  }
+  &__dropdown_item label{
+    margin-right: 7px;
+    padding-bottom: 15px;
+  }
+  &__dropdown_checkbox{
+    margin-right: 5px;
+  }
+  &__dropdown_text{
+    line-height: 26px;
+  }
+}
+
+.sort{
+  display: flex;
+  justify-content: space-between;
+  &__button{
+    padding: 10px 15px;
+    color: $darkblue;
+    background-color: $lightgrey;
+  }
+  ._activeButton{
+    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    color: black;
+    background-color: white;
+  }
+  &__price{
+    margin-left: 50px;
+  }
+  &__arrows{
+    display: flex;
+  }
+  &__arrow{
+    border: 1px solid $grey;
+    padding: 9px 6px;
+    background-color: $lightgrey;
+  }
+  ._activeBoxArrow{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border: none;
+  }
+  ._activeArrow{
+    border: solid black;
+    border-width: 0 1px 1px 0;
+  }
+  &__down{
+    display: inline-block;
+    border: solid $darkblue;
+    border-width: 0 1px 1px 0;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg) translate(-5px, 1px);
+    margin-left: 10px;
+  }
+  &__up{
+    display: inline-block;
+    border: solid $darkblue;
+    border-width: 0 1px 1px 0;
+    width: 15px;
+    height: 15px;
+    transform: rotate(-135deg)  translate(0px, -7px);
+    margin-left: 10px;
+  }
+  &__show_filters_button{
+    padding: 0 15px;
+    background-color: white;
+    border: 1px solid $grey;
+    display: none;
+  }
+}
+
+.card{
+  display: inline-block;
+  border: 1px solid $grey;
+  padding: 25px 20px;
+  &__pictures{
+    display: flex;
+    gap: 35px;
+  }
+  &__photo{
+
+  }
+  &__buttons > li{
+    margin-bottom: 18px;
+  }
+  &__text{
+    margin: 30px 0 15px 0;
+  }
+  &__button{
+
+  }
+}
+
+.filter{
+  margin-left: 50px;
+  &__title{
+    text-transform: uppercase;
+  }
+  &__column{
+    margin-top: 30px;
+  }
+  &__column:first-child{
+    margin-top: 0;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+  &__row{
+    flex-direction: row;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  &__input{
+    max-width: 110px;
+  }
+  &__show{
+    margin-top: 14px;
+  }
+  &__button{
+    margin-top: 30px;
+  }
+}
+
+#popularitySwitch{
+  width: 150px
+}
+
+#priceSwitch{
+  width: 86px;
+  margin-left: -5px;
+}
+
+.swiper{
+  padding: 5px !important;
+  &-slide{
+    position: relative;
+    padding: 70px 15px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  ._activeSlide{
+    border: 1px solid $grey;
+    box-shadow: none;
+  }
+  &__check_mark{
+    position: absolute;
+    background-image: url("/content/svg/greySliderCheckmark.svg");
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  ._activeCheckMark{
+    background-image: url("/content/svg/greenSliderCheckmark.svg");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media(max-width: 1150px){
+  .main{
+    &__catalog{
+      grid-template: 1fr / 1fr 1fr;
+      max-height: 1000px;
+    }
+    &__grid-wrapper{
+      grid-template: 150px 1fr/ 1fr 1fr;
+    }
+    &__sort{
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+}
+
+@media(max-width: 900px){
+  .main{
+    &__catalog{
+      grid-template: 1fr / 1fr;
+      max-height: none;
+      max-width: 266px;
+    }
+    &__sort_container{
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__dropdown_button{
+      margin-left: 0;
+    }
+    &__grid-wrapper{
+      grid-template: 200px 1fr/ 1fr 1fr;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .filter{
+    display: none;
+  }
+  .main{
+    &__sort_container{
+      & > div{
+        display: flex;
+      }
+    }
+    &__grid-wrapper{
+      align-items: center;
+      justify-content: center;
+      grid-template: 200px / 266px;
+    }
+    &__dropdown_button{
+      width: 100%;
+    }
+    &__dropdown_content{
+      transform: translate(57px, 53px);
+    }
+  }
+  .sort{
+    &__container{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__show_filters_button{
+      display: block;
+    }
+    &__button{
+      width: 100%;
+    }
+  }
+  #popularitySwitch{
+    width: 170px
+  }
+
+  #priceSwitch{
+    width: 100px;
+    margin-left: -4px;
+  }
+
+}
