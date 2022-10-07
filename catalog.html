@@ -21,6 +21,7 @@
                 <li class="header__item"><a data-goto=".main__section_1" href="mainPage.html" class="small-text header__link">О КОМПАНИИ</a></li>
                 <li class="header__item"><a data-goto=".main__section_2" href="mainPage.html" class="small-text header__link">НОВОСТИ</a></li>
                 <li class="header__item"><a data-goto=".main__section_3" href="mainPage.html" class="small-text header__link">КОНТАКТЫ</a></li>
+                <li class="header__item header__menu_enter_button"><a href="" class="small-text">ВОЙТИ</a></li>
             </ul>
             <ul class="header__burger-icons">
                 <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
@@ -39,7 +40,7 @@
                 </label>
             </div>
         </div>
-        <a href="" class="small-text">ВОЙТИ</a>
+        <a href="" class="small-text header__enter_button">ВОЙТИ</a>
         <ul class="header__icons">
             <li class="header__icon"><a href=""><img src="./content/svg/Star.svg" alt=""></a></li>
             <li class="header__icon"><a href=""><img src="./content/svg/compare.svg" alt=""></a></li>
@@ -166,7 +167,195 @@
                                 <span class="sort__up arroww"></span>
                             </div>
                         </div>
-                        <button class="sort__show_filters_button">All filters</button>
+                        <button class="sort__show_filters_button">Все фильтры</button>
+                        <div class="sort__filter_menu">
+                            <div class="sort__filter filter">
+                                <div class="filter__cross_container cross">
+                                    <div class="cross__bar_1 cross__bar"></div>
+                                    <div class="cross__bar_2 cross__bar"></div>
+                                </div>
+                                <div class="filter__column">
+                                    <div class="filter__title bold-text-small">Объектив в комплекте</div>
+                                    <div class="filter__list">
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-radio">
+                                                    <input type="radio" name="lens">
+                                                    <span class="custom-radio__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>Да</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-radio">
+                                                    <input type="radio" name="lens">
+                                                    <span class="custom-radio__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>Нет</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-radio">
+                                                    <input type="radio" name="lens">
+                                                    <span class="custom-radio__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>Не важно</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__column">
+                                    <div class="filter__title bold-text-small">Формат матрицы</div>
+                                    <div class="filter__list">
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>4/3 (Four Thirds)</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>APS-C</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>APS-H</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>Full frame</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__column">
+                                    <div class="filter__title bold-text-small">Максимальное разрешение записи видеоролика</div>
+                                    <div class="filter__list filter__row" style="max-width: 240px">
+                                        <label>
+                                            <input type="text" placeholder="От 1" class="grey-input filter__input">
+                                        </label>
+                                        <span class="dash"></span>
+                                        <label>
+                                            <input type="text" placeholder="До 60" class="grey-input filter__input">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__column">
+                                    <div class="filter__title bold-text-small">Максимальное разрешение записи видеоролика</div>
+                                    <div class="filter__list">
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>640x480</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>1920x1080</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>1280x720</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>320x240</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>3840x2160</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>576x720</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>576x960</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>1520x2592</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>1920x2592</div>
+                                        </div>
+                                        <div class="filter__item">
+                                            <div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__mark"></span>
+                                                </label>
+                                            </div>
+                                            <div>3072x2048</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -521,10 +710,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script>
-  let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    spaceBetween: 30,
-  });
+
 </script>
 <script src="script/headerFooter.js"></script>
 <script src="script/catalog.js"></script>

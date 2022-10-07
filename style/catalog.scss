@@ -4,6 +4,10 @@
 @import "headerFooter";
 @import "textStyles";
 
+body{
+  overflow-x: hidden;
+}
+
 .main{
   margin: 50px auto;
   max-width: 1200px;
@@ -103,6 +107,9 @@
   &__dropdown_text{
     line-height: 26px;
   }
+  &__filter{
+    margin-left: 50px;
+  }
 }
 
 .sort{
@@ -163,6 +170,19 @@
     border: 1px solid $grey;
     display: none;
   }
+  &__filter_menu{
+    position: fixed;
+    display: none;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid $grey;
+    background-color: white;
+  }
+  ._activeFilterMenu{
+    display: block;
+  }
 }
 
 .card{
@@ -188,7 +208,6 @@
 }
 
 .filter{
-  margin-left: 50px;
   &__title{
     text-transform: uppercase;
   }
@@ -261,6 +280,20 @@
   }
 }
 
+.cross{
+  &__bar{
+    width: 35px;
+    height: 3px;
+    background-color: black;
+  }
+  &__bar_1{
+    transform: rotate(45deg);
+  }
+  &__bar_2{
+    transform: translate(-1px, -3px) rotate(-45deg);
+  }
+}
+
 @media(max-width: 1150px){
   .main{
     &__catalog{
@@ -299,10 +332,13 @@
 }
 
 @media(max-width: 600px){
-  .filter{
-    display: none;
+  .cross{
+    float: right;
   }
   .main{
+    &__filter{
+      display: none;
+    }
     &__sort_container{
       & > div{
         display: flex;
@@ -321,6 +357,9 @@
     }
   }
   .sort{
+    &__filter{
+      margin: 50px 15px;
+    }
     &__container{
       display: flex;
       justify-content: space-between;

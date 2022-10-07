@@ -12,6 +12,10 @@ const body = document.body;
 const sliderItem = document.querySelectorAll('.swiper-slide');
 const sliderCheckMarks = document.querySelectorAll('.swiper__check_mark');
 
+const showFilters = document.querySelector('.sort__show_filters_button');
+const cross = document.querySelector('.cross');
+const filterMenu = document.querySelector('.sort__filter_menu');
+
 const showMenuHandler = () => {
   sortMenu.classList.toggle('_activeSortDD');
   arrows.forEach(el =>{
@@ -71,6 +75,29 @@ sliderItem.forEach((el, ind)=>{
   })
 })
 
+let swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    1200: {
+      slidesPerView: 5,
+    },
+    930:{
+      slidesPerView: 4,
+    },
+    670:{
+      slidesPerView: 3,
+    }
+  }
+});
+
+showFilters.addEventListener('click', ()=>{
+  filterMenu.classList.add('_activeFilterMenu');
+})
+
+cross.addEventListener('click', ()=>{
+  filterMenu.classList.remove('_activeFilterMenu');
+})
 
 
 

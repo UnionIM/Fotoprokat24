@@ -37,6 +37,9 @@
   .header__searchbar-login:hover > button .search-window{
     border: solid 1px red;
   }
+  &__menu_enter_button{
+    display: none;
+  }
 }
 
 .dropdown__content{
@@ -49,6 +52,7 @@
   height: 70px;
   width: 320px;
   z-index: 1;
+  background-color: white;
 
   opacity: 0;
   transform: translate(0, 30%);
@@ -157,13 +161,11 @@ body._pc .header__searchbar:hover .dropdown__content{
 
 @media (max-width: 1300px) {
   .header{
-    padding: 15px 50px;
     &__input{
       display: none;
     }
   }
   body._pc .header__searchbar:hover{
-    transform: translate(0, 0);
     padding: 21px 0;
   }
   .dropdown__button{
@@ -261,7 +263,17 @@ body._pc .header__searchbar:hover .dropdown__content{
 }
 
 @media(max-width: 650px){
+  .header{
+    padding: 29px 10px;
+    &__menu{
+      width: 200px;
+    }
+  }
+  .dropdown__content{
+    left: -100px;
+  }
   .footer{
+    height: 600px;
     .interactive-bar{
       &__content{
         flex-direction: column;
@@ -270,6 +282,23 @@ body._pc .header__searchbar:hover .dropdown__content{
     }
     &__interactive-bar{
       height: 230px;
+    }
+    &__media-row{
+      text-align: right;
+    }
+    &__info{
+      grid-template: 1fr/ 1fr;
+    }
+  }
+}
+
+@media(max-width: 400px){
+  .header{
+    &__enter_button{
+      display: none;
+    }
+    &__menu_enter_button{
+      display: block;
     }
   }
 }
