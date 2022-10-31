@@ -78,6 +78,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    padding: 0 15px;
   }
   &__card{
     max-width: 350px;
@@ -101,6 +102,25 @@ body{
   }
 }
 
+@media(max-width: 950px){
+  .main{
+    &__benefits{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  .main__motto div{
+    padding: 5px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .gradient-title{
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 720px){
   .small-text{
     font-size: $smallText;
@@ -109,5 +129,5 @@ body{
   .text{
     font-size: 20px;
   }
-  //Create burger menu in header__menu
+
 }
