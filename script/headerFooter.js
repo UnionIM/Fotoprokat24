@@ -48,6 +48,7 @@ function app () {
   const menu = document.querySelector('.header__menu');
 
   const infoLink = document.querySelectorAll('.header__link[data-goto]')
+  const logo = document.querySelector('.header__logo')
 
 
   const searchMenuHandler = (e) => {
@@ -66,9 +67,12 @@ function app () {
     burger.classList.toggle('burger_active')
   })
 
+  logo.addEventListener('click', () => {
+    window.sessionStorage.setItem('0', '-1')
+  })
+
   if(infoLink.length > 0){
     infoLink.forEach((el, ind) => {
-      window.sessionStorage.setItem('0', '-1');
       el.addEventListener('click', () => {
         window.sessionStorage.setItem('0', ind.toString());
       })
