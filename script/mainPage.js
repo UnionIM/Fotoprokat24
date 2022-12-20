@@ -10,8 +10,7 @@ const scrollTo = (e, flag = true) => {
 
   if(infoLink.dataset.goto && document.querySelector(infoLink.dataset.goto)){
     const gotoBlock = document.querySelector(infoLink.dataset.goto);
-    const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
-
+    const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - 84;
     window.scrollTo({
       top: gotoBlockValue,
       behavior: "smooth"
@@ -30,9 +29,6 @@ if(infoLink.length > 0){
 
 infoLink.forEach((el, ind) => {
   if(window.sessionStorage.getItem('0') === ind.toString()){
-    console.log(ind.toString())
     scrollTo(el, false)
   }
 })
-
-console.log(window.sessionStorage)

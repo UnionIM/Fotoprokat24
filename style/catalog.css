@@ -30,6 +30,9 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -284,6 +287,9 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -538,6 +544,9 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -857,11 +866,16 @@ body {
 
 .header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   font-weight: 700;
   padding: 29px 135px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #EFEFEF;
+  background-color: white;
   max-height: 84px;
   z-index: 10;
 }
@@ -1169,6 +1183,9 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
   overflow-x: hidden;
 }
 
